@@ -32,6 +32,8 @@ def sleep_screen():
     subprocess.call('amixer set Master mute'.split())
     print('\nHave a nice rest! Signing out until dawn ({}).'.format(
         dt.datetime.now()))
+    subprocess.call(
+        'gsettings set org.gnome.desktop.session idle-delay 60'.split())
     print('\\' * 36 + '|' * 8 + '/' * 36)
     print('\\' * 38 + '|' * 4 + '/' * 38)
     print('\\' * 40 + '/' * 40)
